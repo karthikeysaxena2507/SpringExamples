@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:TEST;DB_CLOSE_DELAY=-1;
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database: h2
+    properties:
+      eclipselink.weaving: static
+      eclipselink.ddl-generation: drop-and-create-tables
+      eclipselink.logging.timestamp: false
+      eclipselink.logging.session: false
+      eclipselink.logging.connection: false
+      eclipselink.logging.thread: false
+      eclipselink.logging.level.sql: ALL
+      eclipselink.logging.parameters: true
+      eclipselink.ddl-generation.output-mode: database
+  h2.console.enabled: true
